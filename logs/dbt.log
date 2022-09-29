@@ -1,0 +1,25 @@
+
+
+============================== 2022-09-23 06:06:43.434551 | b00fd27d-aeae-4542-8cdb-d41918865bb4 ==============================
+[0m06:06:43.434551 [info ] [MainThread]: Running with dbt=1.2.1
+[0m06:06:43.435593 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': 'C:\\Users\\Yogendra Sharma\\.dbt', 'send_anonymous_usage_stats': True, 'event_buffer_size': 100000, 'quiet': False, 'no_print': False, 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m06:06:43.436592 [debug] [MainThread]: Tracking: tracking
+[0m06:06:43.468706 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FC3757E020>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FC3757EE90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FC3757CF10>]}
+[0m06:06:57.635456 [debug] [MainThread]: Starter project path: C:\Users\Yogendra Sharma\AppData\Local\Programs\Python\Python310\lib\site-packages\dbt\include\starter_project
+[0m06:25:44.673470 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FC3757F730>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FC3757D210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FC3757FA60>]}
+[0m06:25:44.675009 [debug] [MainThread]: Flushing usage events
+[0m06:25:45.643864 [error] [MainThread]: Encountered an error:
+list index out of range
+[0m06:25:45.665584 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\Yogendra Sharma\AppData\Local\Programs\Python\Python310\lib\site-packages\dbt\main.py", line 129, in main
+    results, succeeded = handle_and_check(args)
+  File "C:\Users\Yogendra Sharma\AppData\Local\Programs\Python\Python310\lib\site-packages\dbt\main.py", line 191, in handle_and_check
+    task, res = run_from_args(parsed)
+  File "C:\Users\Yogendra Sharma\AppData\Local\Programs\Python\Python310\lib\site-packages\dbt\main.py", line 238, in run_from_args
+    results = task.run()
+  File "C:\Users\Yogendra Sharma\AppData\Local\Programs\Python\Python310\lib\site-packages\dbt\task\init.py", line 325, in run
+    adapter = self.ask_for_adapter_choice()
+  File "C:\Users\Yogendra Sharma\AppData\Local\Programs\Python\Python310\lib\site-packages\dbt\task\init.py", line 256, in ask_for_adapter_choice
+    return available_adapters[numeric_choice - 1]
+IndexError: list index out of range
+

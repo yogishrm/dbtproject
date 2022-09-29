@@ -1,0 +1,16 @@
+# ~/.dbt/profiles.yml
+
+my-databricks:
+  outputs:
+    dev:
+      type: spark
+      method: https
+      schema: dev_dbtproject
+      host: adb-8306817187918870.10.azuredatabricks.net
+      port: 443
+      token: dapi2feca46ca32386bf6c35b9bd403c950f
+      cluster: 0905-083230-605napd
+      connect_timeout: 30
+      connect_retries: 15
+      threads: 5
+  target: dev
