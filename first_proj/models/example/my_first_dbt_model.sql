@@ -9,16 +9,14 @@
 
 {{ config(materialized='table') }}
 
-with source_data as (
+with data_1 as (
 
-    select 1 as id
-    union all
-    select null as id
+    select max(Radius_mean) as Radius_mean 
 
 )
 
 select *
-from source_data
+from data_1
 
 /*
     Uncomment the line below to remove records with null `id` values
